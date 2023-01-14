@@ -38,11 +38,14 @@ var slider3 = document.querySelector(".slider3")
 var closeSlider3 = document.querySelector(".fa-xmark")
 mail.onclick = function(){
     slider3.classList.add("active")
+    setTimeout(() => {
+        slider3.classList.remove('active')
+    }, 5000)
 }
+
 closeSlider3.addEventListener('click', function(){
     slider3.classList.remove('active')
 })
-
 
 // ------audio------------
 var buttonSong = document.querySelector('.button')

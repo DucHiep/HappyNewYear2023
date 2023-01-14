@@ -1,4 +1,4 @@
-var fut = new Date("jan 12, 2023 13:29:00").getTime()
+var fut = new Date("jan 15, 2023 00:00:00").getTime()
 let x = setInterval(function stime(){
     var now = new Date().getTime()
     var D = fut - now
@@ -14,8 +14,9 @@ let x = setInterval(function stime(){
     document.getElementById("minutes").innerText = minutes
     document.getElementById("seconds").innerText = seconds
 
-    if(D<0){
-        clearInterval(x);
+    clearInterval(x);
+    setTimeout(() => {
         window.location.href="intro.html"
-    }
+    }, 4000);
+
 }, 0.1);
